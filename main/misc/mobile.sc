@@ -3349,7 +3349,7 @@ cell_phone_sanfran_inner:
 				ENDIF
 				
 				IF driving_test_passed = 1
-				AND flag_desert_mission_counter > 3
+				AND flag_desert_mission_counter > 0 // PakoChange: Changed requirements so it unlocks sooner
 					// JETHRO PHONE CALL. TRIGGERS RACE TOUR***************************************************************** 					
 					IF flag_mob_sanfran[3] = 0
 						//PRINT_HELP ( ANSWER )

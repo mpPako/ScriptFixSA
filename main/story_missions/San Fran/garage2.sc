@@ -871,11 +871,11 @@ DECON_m_stage_1:
 				CLEAR_SEQUENCE_TASK temp_seq
 			ENDIF
 
-
-			IF DOES_OBJECT_EXIST init_portakabin[3]
-				SET_OBJECT_COORDINATES init_portakabin[3] -2077.0400 280.395 35.817  
-				SET_OBJECT_HEADING init_portakabin[3] 0.0
-			ENDIF
+// PakoChange: Removed coords change of the portakabin[3] so it matches during and before mission
+// 			IF DOES_OBJECT_EXIST init_portakabin[3]
+//				SET_OBJECT_COORDINATES init_portakabin[3] -2077.0400 280.395 35.817  
+//				SET_OBJECT_HEADING init_portakabin[3] 0.0
+//			ENDIF
 
 			CLEAR_PRINTS
 			SWITCH_WIDESCREEN OFF

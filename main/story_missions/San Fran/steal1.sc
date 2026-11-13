@@ -684,7 +684,7 @@ IF st1_stage = 2
 		GET_CAR_SPEED st1_girl_car st1_girl_car_speed
 		GET_CAR_COORDINATES st1_girl_car st1_girl_car_x st1_girl_car_y st1_girl_car_z
 		IF st1_route < st1_final_dest
-			IF LOCATE_CHAR_IN_CAR_3D st1_girl st1_route_x[st1_route] st1_route_y[st1_route] st1_route_z[st1_route] 10.0 10.0 10.0 FALSE
+			IF LOCATE_CHAR_IN_CAR_3D st1_girl st1_route_x[st1_route] st1_route_y[st1_route] st1_route_z[st1_route] 15.0 15.0 15.0 FALSE // PakoChange: Helps her navigate a bit, not much tho
 				st1_route++
 				st1_route_nx++
 				TASK_CAR_DRIVE_TO_COORD st1_girl st1_girl_car st1_route_x[st1_route] st1_route_y[st1_route] st1_route_z[st1_route] st1_cruise_speed MODE_NORMAL FALSE DRIVINGMODE_AVOIDCARS
@@ -1154,240 +1154,240 @@ st1_blip_colour = st1_temp_sum_a + st1_temp_sum_b
 CHANGE_BLIP_COLOUR st1_girl_car_blip st1_blip_colour
 
 RETURN
-
+// PakoChange: Changed to accomodate sooner Wang Cars unlock 
 st1_escape_route:
 
-st1_route_x[0] = -2017.0007 
-st1_route_y[0] = 322.4644 
-st1_route_z[0] = 34.7593 
+st1_route_x[0] = -2017.0007
+st1_route_y[0] = 322.4644
+st1_route_z[0] = 34.7593
 
-st1_route_x[1] = -2036.4390 
-st1_route_y[1] = 322.4642 
-st1_route_z[1] = 34.0156
+st1_route_x[1] = -2036.4390
+st1_route_y[1] = 322.4642
+st1_route_z[1] = 34.7500
 
-st1_route_x[2] = -2148.5054 
-st1_route_y[2] = 227.5995 
-st1_route_z[2] = 34.8814 
+st1_route_x[2] = -2126.7344
+st1_route_y[2] = 317.7932
+st1_route_z[2] = 35.0000
 
-st1_route_x[3] = -2244.5747 
-st1_route_y[3] = 211.4546 
-st1_route_z[3] = 34.8840 
+st1_route_x[3] = -2148.9636
+st1_route_y[3] = 228.6208
+st1_route_z[3] = 34.7500
 
-st1_route_x[4] = -2252.4258 
-st1_route_y[4] = 110.4054 
-st1_route_z[4] = 34.8813 
+st1_route_x[4] = -2229.5459
+st1_route_y[4] = 210.9706
+st1_route_z[4] = 34.7500
 
-st1_route_x[5] = -2254.3977 
-st1_route_y[5] = 64.4779 
-st1_route_z[5] = 34.8865 
+st1_route_x[5] = -2254.7546
+st1_route_y[5] = 140.4839
+st1_route_z[5] = 34.7500
 
-st1_route_x[6] = -2333.1938 
-st1_route_y[6] = 52.1153 
-st1_route_z[6] = 34.8895 
+st1_route_x[6] = -2257.5940
+st1_route_y[6] = 69.3835
+st1_route_z[6] = 34.7500
 
-st1_route_x[7] = -2373.7935 
-st1_route_y[7] = -39.8936 
-st1_route_z[7] = 34.8887 
+st1_route_x[7] = -2365.0745
+st1_route_y[7] = 42.7732
+st1_route_z[7] = 34.7500
 
-st1_route_x[8] = -2411.4060 
-st1_route_y[8] = -71.5329 
-st1_route_z[8] = 34.8695 
+st1_route_x[8] = -2374.4775
+st1_route_y[8] = -49.9042
+st1_route_z[8] = 34.7500
 
-st1_route_x[9] = -2421.9858 
-st1_route_y[9] = -171.5927 
-st1_route_z[9] = 34.8702 
+st1_route_x[9] = -2480.9714
+st1_route_y[9] = -67.8548
+st1_route_z[9] = 28.7387
 
-st1_route_x[10] = -2514.4871 
-st1_route_y[10] = -209.5909 
-st1_route_z[10] = 24.5432 
+st1_route_x[10] = -2603.9541
+st1_route_y[10] = -67.9465
+st1_route_z[10] = 3.8901
 
-st1_route_x[11] = -2612.3376 
-st1_route_y[11] = -208.1451 
-st1_route_z[11] = 3.8877 
+st1_route_x[11] = -2681.6685
+st1_route_y[11] = -67.8457
+st1_route_z[11] = 3.8750
 
-st1_route_x[12] = -2700.5417 
-st1_route_y[12] = -205.7518 
-st1_route_z[12] = 3.8928 
+st1_route_x[12] = -2704.2288
+st1_route_y[12] = 18.9053
+st1_route_z[12] = 3.7896
 
-st1_route_x[13] = -2703.4553 
-st1_route_y[13] = -105.7246 
-st1_route_z[13] = 3.8899 
+st1_route_x[13] = -2704.0532
+st1_route_y[13] = 137.0199
+st1_route_z[13] = 3.8750
 
-st1_route_x[14] = -2704.9326 
-st1_route_y[14] = -88.0339 
-st1_route_z[14] = 3.8934 
+st1_route_x[14] = -2639.4153
+st1_route_y[14] = 154.9673
+st1_route_z[14] = 3.8750
 
-st1_route_x[15] = -2791.1985 
-st1_route_y[15] = -69.7781 
-st1_route_z[15] = 6.7409 
+st1_route_x[15] = -2534.0381
+st1_route_y[15] = 156.3517
+st1_route_z[15] = 3.8750
 
-st1_route_x[16] = -2807.2424 
-st1_route_y[16] = 29.8687 
-st1_route_z[16] = 6.7487 
+st1_route_x[16] = -2433.8579
+st1_route_y[16] = 218.5182
+st1_route_z[16] = 18.7439
 
-st1_route_x[17] = -2807.9224 
-st1_route_y[17] = 131.0431 
-st1_route_z[17] = 6.7324 
+st1_route_x[17] = -2359.2859
+st1_route_y[17] = 292.7491
+st1_route_z[17] = 36.0398
 
-st1_route_x[18] = -2807.2468 
-st1_route_y[18] = 232.0953 
-st1_route_z[18] = 6.7535 
+st1_route_x[18] = -2249.2834
+st1_route_y[18] = 333.3467
+st1_route_z[18] = 35.3437
 
-st1_route_x[19] = -2831.3765 
-st1_route_y[19] = 329.6273 
-st1_route_z[19] = 4.0742 
+st1_route_x[19] = -2322.2996
+st1_route_y[19] = 411.1740
+st1_route_z[19] = 34.7500
 
-st1_route_x[20] = -2851.8401 
-st1_route_y[20] = 427.8425 
-st1_route_z[20] = 4.0745 
+st1_route_x[20] = -2374.9324
+st1_route_y[20] = 356.6479
+st1_route_z[20] = 34.7500
 
-st1_route_x[21] = -2831.4180 
-st1_route_y[21] = 526.6416 
-st1_route_z[21] = 4.6276 
+st1_route_x[21] = -2418.4014
+st1_route_y[21] = 254.7603
+st1_route_z[21] = 35.3124
 
-st1_route_x[22] = -2821.2705 
-st1_route_y[22] = 626.4095 
-st1_route_z[22] = 7.8679 
+st1_route_x[22] = -2423.3992
+st1_route_y[22] = 151.8700
+st1_route_z[22] = 34.7500
 
-st1_route_x[23] = -2849.5251 
-st1_route_y[23] = 720.4027 
-st1_route_z[23] = 28.1290 
+st1_route_x[23] = -2424.2600
+st1_route_y[23] = 63.8982
+st1_route_z[23] = 34.7500
 
-st1_route_x[24] = -2840.6128 
-st1_route_y[24] = 819.4821 
-st1_route_z[24] = 40.6696 
+st1_route_x[24] = -2423.4756
+st1_route_y[24] = -24.1075
+st1_route_z[24] = 34.7500
 
-st1_route_x[25] = -2816.8728 
-st1_route_y[25] = 897.2410 
-st1_route_z[25] = 43.6833 
+st1_route_x[25] = -2423.7375
+st1_route_y[25] = -107.1639
+st1_route_z[25] = 34.7500
 
-st1_route_x[26] = -2776.3962 
-st1_route_y[26] = 809.4246 
-st1_route_z[26] = 50.6937 
+st1_route_x[26] = -2431.6575
+st1_route_y[26] = -199.2663
+st1_route_z[26] = 34.7500
 
-st1_route_x[27] = -2676.2866 
-st1_route_y[27] = 810.1769 
-st1_route_z[27] = 49.5432 
+st1_route_x[27] = -2525.2021
+st1_route_y[27] = -208.2409
+st1_route_z[27] = 20.9853
 
-st1_route_x[28] = -2575.5583 
-st1_route_y[28] = 807.5107 
-st1_route_z[28] = 49.5239 
+st1_route_x[28] = -2641.5498
+st1_route_y[28] = -207.9246
+st1_route_z[28] = 3.8750
 
-st1_route_x[29] = -2528.4617 
-st1_route_y[29] = 809.4405 
-st1_route_z[29] = 49.5356 
+st1_route_x[29] = -2788.4358
+st1_route_y[29] = -207.5778
+st1_route_z[29] = 6.7500
 
-st1_route_x[30] = -2526.5640 
-st1_route_y[30] = 908.4559 
-st1_route_z[30] = 64.5370 
+st1_route_x[30] = -2813.6096
+st1_route_y[30] = -276.2604
+st1_route_z[30] = 6.7500
 
-st1_route_x[31] = -2525.0891 
-st1_route_y[31] = 999.8545 
-st1_route_z[31] = 77.8166 
+st1_route_x[31] = -2821.4526
+st1_route_y[31] = -366.0646
+st1_route_z[31] = 6.7500
 
-st1_route_x[32] = -2594.6897 
-st1_route_y[32] = 1006.4087 
-st1_route_z[32] = 77.8242 
+st1_route_x[32] = -2814.7229
+st1_route_y[32] = -467.1574
+st1_route_z[32] = 6.7708
 
-st1_route_x[33] = -2587.4739 
-st1_route_y[33] = 1092.9789 
-st1_route_z[33] = 56.2406 
+st1_route_x[33] = -2799.7898
+st1_route_y[33] = -488.2294
+st1_route_z[33] = 6.9317
 
-st1_route_x[34] = -2591.7122 
-st1_route_y[34] = 1135.3021 
-st1_route_z[34] = 55.1350 
+st1_route_x[34] = -2849.8918
+st1_route_y[34] = -579.4026
+st1_route_z[34] = 6.7875
 
-st1_route_x[35] = -2658.5493 
-st1_route_y[35] = 1209.7676 
-st1_route_z[35] = 55.1386 
+st1_route_x[35] = -2873.7119
+st1_route_y[35] = -739.6668
+st1_route_z[35] = 6.7875
 
-st1_route_x[36] = -2669.4744 
-st1_route_y[36] = 1309.3092 
-st1_route_z[36] = 55.1228 
+st1_route_x[36] = -2873.2273
+st1_route_y[36] = -916.6135
+st1_route_z[36] = 9.1250
 
-st1_route_x[37] = -2677.5388 
-st1_route_y[37] = 1409.6298 
-st1_route_z[37] = 55.1226 
+st1_route_x[37] = -2893.6108
+st1_route_y[37] = -1049.4373
+st1_route_z[37] = 9.1250
 
-st1_route_x[38] = -2669.2937 
-st1_route_y[38] = 1509.8888 
-st1_route_z[38] = 58.6901 
+st1_route_x[38] = -2913.5798
+st1_route_y[38] = -1175.4369
+st1_route_z[38] = 9.1212
 
-st1_route_x[39] = -2674.5425 
-st1_route_y[39] = 1610.9475 
-st1_route_z[39] = 64.4835 
+st1_route_x[39] = -2931.8779
+st1_route_y[39] = -1295.8264
+st1_route_z[39] = 11.0035
 
-st1_route_x[40] = -2675.3433 
-st1_route_y[40] = 1711.9075 
-st1_route_z[40] = 67.4134 
+st1_route_x[40] = -2942.0020
+st1_route_y[40] = -1405.5809
+st1_route_z[40] = 10.8823
 
-st1_route_x[41] = -2675.3442 
-st1_route_y[41] = 1812.6913 
-st1_route_z[41] = 67.4802 
+st1_route_x[41] = -2937.2183
+st1_route_y[41] = -1512.9028
+st1_route_z[41] = 9.9287
 
-st1_route_x[42] = -2675.3330 
-st1_route_y[42] = 1913.5526 
-st1_route_z[42] = 64.6734 
+st1_route_x[42] = -2927.7976
+st1_route_y[42] = -1640.9739
+st1_route_z[42] = 13.0523
 
-st1_route_x[43] = -2675.7913 
-st1_route_y[43] = 2013.8885 
-st1_route_z[43] = 59.0350 
+st1_route_x[43] = -2924.8074
+st1_route_y[43] = -1774.4652
+st1_route_z[43] = 23.8515
 
-st1_route_x[44] = -2670.8145 
-st1_route_y[44] = 2114.1055 
-st1_route_z[44] = 55.1467 
+st1_route_x[44] = -2891.3442
+st1_route_y[44] = -1905.9948
+st1_route_z[44] = 34.9993
 
-st1_route_x[45] = -2679.1062 
-st1_route_y[45] = 2214.4375 
-st1_route_z[45] = 55.1239 
+st1_route_x[45] = -2815.9534
+st1_route_y[45] = -1987.2598
+st1_route_z[45] = 37.6819
 
-st1_route_x[46] = -2720.0142 
-st1_route_y[46] = 2305.9978 
-st1_route_z[46] = 63.1498 
+st1_route_x[46] = -2705.5649
+st1_route_y[46] = -2048.7068
+st1_route_z[46] = 35.5257
 
-st1_route_x[47] = -2720.7439 
-st1_route_y[47] = 2353.8872 
-st1_route_z[47] = 71.5011 
+st1_route_x[47] = -2603.2212
+st1_route_y[47] = -2111.6277
+st1_route_z[47] = 31.0729
 
-st1_route_x[48] = -2677.1504 
-st1_route_y[48] = 2440.7620 
-st1_route_z[48] = 47.2891 
+st1_route_x[48] = -2532.3474
+st1_route_y[48] = -2228.6875
+st1_route_z[48] = 28.9412
 
-st1_route_x[49] = -2593.7380 
-st1_route_y[49] = 2490.0811 
-st1_route_z[49] = 22.1514 
+st1_route_x[49] = -2494.7190
+st1_route_y[49] = -2369.9348
+st1_route_z[49] = 29.4985
 
-st1_route_x[50] = -2513.9397 
-st1_route_y[50] = 2429.6116 
-st1_route_z[50] = 16.4114 
+st1_route_x[50] = -2460.5530
+st1_route_y[50] = -2501.1970
+st1_route_z[50] = 43.6356
 
-st1_route_x[51] = -2413.6272 
-st1_route_y[51] = 2430.8770 
-st1_route_z[51] = 11.8649 
+st1_route_x[51] = -2367.3171
+st1_route_y[51] = -2604.6880
+st1_route_z[51] = 57.5152
 
-st1_route_x[52] = -2339.4143 
-st1_route_y[52] = 2395.6228 
-st1_route_z[52] = 5.5583 
+st1_route_x[52] = -2236.7217
+st1_route_y[52] = -2663.2810
+st1_route_z[52] = 57.9872
 
-st1_route_x[53] = -2422.8386 
-st1_route_y[53] = 2340.1985 
-st1_route_z[53] = 4.5444 
+st1_route_x[53] = -2088.8113
+st1_route_y[53] = -2683.0789
+st1_route_z[53] = 53.3718
 
-st1_route_x[54] = -2462.5752 
-st1_route_y[54] = 2334.2646 
-st1_route_z[54] = 4.5459 
+st1_route_x[54] = -1926.9172
+st1_route_y[54] = -2662.9482
+st1_route_z[54] = 51.1170
 
-st1_route_x[55] = -2467.3274 
-st1_route_y[55] = 2276.3762 
-st1_route_z[55] = 4.5468 
+st1_route_x[55] = -1923.2749
+st1_route_y[55] = -2605.2949
+st1_route_z[55] = 42.9944
 
-st1_route_x[56] = -2560.3081 
-st1_route_y[56] = 2313.5662 
-st1_route_z[56] = 4.5508 
+st1_route_x[56] = -2027.4485
+st1_route_y[56] = -2501.5193
+st1_route_z[56] = 31.6660
 
-st1_route_x[57] = -2560.2864 
-st1_route_y[57] = 2316.4421 
-st1_route_z[57] = 4.5491 
+st1_route_x[57] = -2138.8328
+st1_route_y[57] = -2412.5200
+st1_route_z[57] = 30.1250
 RETURN
 
 /*

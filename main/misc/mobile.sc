@@ -3376,8 +3376,7 @@ cell_phone_sanfran_inner:
 					// **********************************************************************************************************
 				ENDIF
 
-				IF flag_mob_sanfran[9] = 1
-				AND driving_test_passed = 1
+				IF driving_test_passed = 1 // PakoChange: Changed Wang Cars unlock requirements
 					// JETHRO PHONE CALL. TRIGGERS STEAL PROPERTY BUY***************************************************************** 					
 					IF flag_mob_sanfran[4] = 0
 						//PRINT_HELP ( ANSWER )

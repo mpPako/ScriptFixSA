@@ -495,10 +495,7 @@ RETURN
 
 // ************************************ MISSION PASSED *************************************
 mission_des10_passed:
-
-VAR_INT pilot_revenue pilot_cash_pickup // put this in initial
-pilot_revenue = 10000 // put this in initial
-
+// PakoChange: Moved stuff to initial as specified
 lvar_int jetpack_pickup
 CREATE_PICKUP jetpack pickup_on_street_slow 431.0450 2537.7798 16.2463 jetpack_pickup
 

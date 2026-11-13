@@ -1297,6 +1297,15 @@ VAR_INT d2_num_packages_collected d6_door_health
 VAR_INT showroom_revenue showroom_cash_pickup 
 showroom_revenue = 8000 
 
+// PakoChange: Moved from desert10 as specified
+// VERDANT MEADOWS ASSET
+VAR_INT pilot_revenue pilot_cash_pickup
+pilot_revenue = 10000
+
+// PakoChange: Added asset pickup to 4dragons
+// FOUR DRAGONS ASSET
+VAR_INT fourdragons_revenue fourdragons_cash_pickup
+fourdragons_revenue = 15000
 
 //VAR_INT TO PASS STRAP4 - see andyd
 VAR_INT strap4_mission_passed_once_flag

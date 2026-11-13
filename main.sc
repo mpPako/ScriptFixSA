@@ -7495,7 +7495,9 @@ VAR_TEXT_LABEL entry_exit_name
 								IF NOT IS_BIT_SET iDateReport MEETING_IN_PROGRESS
 									IF NOT IS_MINIGAME_IN_PROGRESS
 										IF CAN_PLAYER_START_MISSION player1
+										OR IS_CHAR_IN_ANY_CAR scplayer
 											IF IS_CHAR_ON_FOOT scplayer
+											OR IS_CHAR_IN_ANY_CAR scplayer
 												IF NOT IS_GANG_WAR_FIGHTING_GOING_ON
 													IF NOT IS_WANTED_LEVEL_GREATER player1 0
 														GET_GAME_TIMER timer_mobile_now

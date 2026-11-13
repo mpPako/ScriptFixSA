@@ -4578,6 +4578,7 @@ mobile_rings:
 	players_skipping_the_call = 1
 	GET_GAME_TIMER timer_mobile_start
 	
+	//PakoChange: In-car uses secondary fire button remapped to TAB to match the tooltip, nothing i can do without editing gxt
 	WHILE IS_BUTTON_PRESSED PAD1 LEFTSHOULDER1
 		WAIT 0
 		IF NOT IS_PLAYER_PLAYING player1
@@ -4605,7 +4606,10 @@ mobile_rings:
             RETURN
 		ENDIF
 
-		TASK_USE_MOBILE_PHONE scplayer TRUE
+		IF IS_CHAR_ON_FOOT scplayer
+			TASK_USE_MOBILE_PHONE scplayer TRUE
+		ENDIF
+
 		timera = 0
 		WHILE timera < 2000
 			WAIT 0
@@ -4647,10 +4651,17 @@ RETURN
 death_checker:
 	mobile_check_result = 0 // FIXEDGROVE: new flag that signals to the caller that they should return
 
+	IF NOT IS_CHAR_ON_FOOT scplayer //PakoChange: to facilitate in-car phonecalls
+	AND NOT IS_CHAR_IN_ANY_CAR scplayer
+		flag_player_answered_phone = 2
+		mobile_check_result = 1
+		CLEAR_HELP
+		RETURN
+	ENDIF
+
 //	IF NOT main_visible_area = 0 // FIXEDGROVE: removed to allow phonecalls in interiors
 	IF IS_CHAR_IN_WATER scplayer
 	OR IS_CHAR_SHOOTING scplayer
-	OR NOT IS_CHAR_ON_FOOT scplayer
 	OR flag_player_on_mission = 0
 	OR NOT IS_PLAYER_CONTROL_ON player1 // FIXEDGROVE: added for some cases
 	OR NOT player_fall_state = 0
@@ -4696,13 +4707,16 @@ mobile_message_cleanup:
 	CLEAR_MISSION_AUDIO 3
 	flag_player_answered_phone = 0
 	flag_mobile_timer = 0
+
 	IF IS_PLAYER_PLAYING player1
 		//GET_SCRIPT_TASK_STATUS scplayer TASK_USE_MOBILE_PHONE mobile_ReturnStatus
 		//IF NOT mobile_ReturnStatus = FINISHED_TASK
+		IF IS_CHAR_ON_FOOT scplayer //PakoChange: to facilitate in-car phonecalls
 			TASK_USE_MOBILE_PHONE scplayer FALSE
-		//ENDIF
+		ENDIF
 		//SET_PLAYER_CONTROL player1 ON // FIXEDGROVE: this should be fine to remove, conflicts with some minigames that take away player control
 	ENDIF
+	
 	SET_EVERYONE_IGNORE_PLAYER player1 OFF
 	SHUT_CHAR_UP scplayer FALSE
 	SET_PLAYER_DISPLAY_VITAL_STATS_BUTTON PLAYER1 TRUE // FIXEDGROVE
